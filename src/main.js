@@ -10,11 +10,14 @@ import { createGtm } from '@gtm-support/vue-gtm' // GTMプラグインインポ�
 
 // Components
 import App from './App.vue'
+import router from './router'
 
 // Composables
 import { createApp } from 'vue'
 
 const app = createApp(App)
+
+app.use(router)
 
 /**
  * VueGTMを用いたPageViewトラッキング送信
