@@ -20,6 +20,12 @@ const enhancedRoutes = setupLayouts(routes).map(route => {
   return route
 })
 
+// リダイレクトルートを追加
+enhancedRoutes.push({
+  path: '/',
+  redirect: '/item'
+})
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: enhancedRoutes, // 修正: enhancedRoutes を使用
