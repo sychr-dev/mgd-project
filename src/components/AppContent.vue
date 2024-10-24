@@ -8,7 +8,15 @@
           <v-col cols="12" md="4">
             <product-card
               image="https://via.placeholder.com/300"
-              title="商品名"
+              title="商品A"
+              subtitle="4,800円"
+              :isLogin="isLogin"
+            />
+          </v-col>
+          <v-col cols="12" md="4">
+            <product-card
+              image="https://via.placeholder.com/300"
+              title="商品B"
               subtitle="9,800円"
               :isLogin="isLogin"
             />
@@ -16,16 +24,8 @@
           <v-col cols="12" md="4">
             <product-card
               image="https://via.placeholder.com/300"
-              title="商品名"
-              subtitle="9,800円"
-              :isLogin="isLogin"
-            />
-          </v-col>
-          <v-col cols="12" md="4">
-            <product-card
-              image="https://via.placeholder.com/300"
-              title="商品名"
-              subtitle="9,800円"
+              title="商品C"
+              subtitle="19,800円"
               :isLogin="isLogin"
             />
           </v-col>

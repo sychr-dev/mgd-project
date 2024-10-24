@@ -12,6 +12,7 @@
   
   <script setup>
   import { useRouter } from 'vue-router'
+  import { getCurrentInstance } from 'vue'
   
   const props = defineProps({
     image: {
@@ -33,9 +34,16 @@
   })
   
   const router = useRouter()
-  
+  const { appContext } = getCurrentInstance()
+
   const buyProduct = () => {
+    //datalayerに情報をセット
     if (props.isLogin) {
+      // dataLayer.push({ ecommerce: null }); 
+      dataLayer.push({ 
+        event: 'purchase',
+        product: props.title
+    }); 
     // ログインしている場合の購入処理
     router.push('/thanks')
   } else {
